@@ -58,17 +58,17 @@ function Home() {
         return <div className="w-full h-screen bg-black flex items-center justify-center text-center">Loading..</div>;
     }
     return (
-        <>
+        <div className='bg-slate-900 text-sky-400'>
             <Header />
-            <Hero />
-            <About />
+            <Hero user={user} />
+            <About  user={user} />
             <Skills />
-            <Projects />
+            {/* <Projects /> */}
             <Services />
             <Timeline />
             <Testimonial />
             <Contact />
-        </>
+        </div>
     );
 }
 
