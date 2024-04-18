@@ -58,16 +58,18 @@ function Home() {
         return <div className="w-full h-screen bg-black flex items-center justify-center text-center">Loading..</div>;
     }
     return (
-        <div className='bg-slate-900 text-sky-400'>
+        <div className=' bg-slate-900  text-white '>
+   
             <Header />
             <Hero user={user} />
             <About  user={user} />
-            <Skills />
-            {/* <Projects /> */}
-            <Services />
-            <Timeline />
-            <Testimonial />
+            <Skills skills={user?.skills}/>
+            <Services services={user?.services}/>
+            <Timeline experience={filteredExperience} education={filteredEducation} />
+            <Projects  projects={sortedFilteredProject}/>
+            <Testimonial  testimonials={filteredTestimonials}/>
             <Contact />
+           
         </div>
     );
 }
