@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import Timeline from '../components/Timeline';
 import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
+
 function Home() {
     const params = useParams();
     const navigate = useNavigate();
@@ -60,15 +61,15 @@ function Home() {
     return (
         <div className=' bg-slate-900  text-white '>
    
-            <Header />
+            <Header user={user} />
             <Hero user={user} />
             <About  user={user} />
             <Skills skills={user?.skills}/>
             <Services services={user?.services}/>
             <Timeline experience={filteredExperience} education={filteredEducation} />
-            <Projects  projects={sortedFilteredProject}/>
+            <Projects  projects={sortedFilteredProject}/> 
             <Testimonial  testimonials={filteredTestimonials}/>
-            <Contact />
+            <Contact user={user} filteredSocialHandles={filteredSocialHandles} />
            
         </div>
     );

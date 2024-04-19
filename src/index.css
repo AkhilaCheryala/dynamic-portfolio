@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+
+body{
+  font-family: "Prata", serif;
+}
+
 .wrapper{
     display: flex;
   }
@@ -12,7 +19,7 @@
   .dynamic-txts li{
     list-style: none;
     color: #f26fe5;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 500;
     position: relative;
     top: 0;
@@ -20,22 +27,22 @@
   }
   @keyframes slide {
     100%{
-      top: -180px;
+      top: -196px;
     }
   }
   .dynamic-txts li span{
     position: relative;
     margin: 5px 0;
-    line-height: 90px;
+  
   }
   .dynamic-txts li span::after{
     content: "";
     position: absolute;
     left: 0;
-    height: 105%;
+    height: 140%;
     width: 100%;
     @apply bg-slate-900;
-    border-left: 2px solid #FC6D6D;
+    border-left: 2px solid #fc6de7;
     animation: typing 5s steps(10) infinite;
   }
   @keyframes typing {
@@ -59,5 +66,7 @@
       transform: translateX(calc(-50% + 200px)); /* Adjust the value accordingly */
     }
   }
-  
+  input[type="range"] {
+    accent-color: rgb(203, 80, 255);
+  }
  

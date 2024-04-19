@@ -4,13 +4,13 @@ function Testimonial({ testimonials }) {
   const duplicatedTestimonials = testimonials.concat(testimonials);
 
   return (
-    <div className="bg-gray-900 text-white py-20 overflow-hidden">
+    <div className="bg-gray-900 text-white py-20 overflow-hidden" id='testimonial'>
       <h2 className="text-3xl font-bold mb-20 text-center">Testimonials</h2>
       <div className="container  mx-auto px-4 overflow-hidden">
         <div className="testimonial-container flex gap-4 animation "  style={{ animationDuration: '5s' }}>
           {duplicatedTestimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-800 p-6 rounded-lg">
-              <div className='w-96'>
+              <div className='w-72'>
                 <img
                   src={testimonial.image.url}
                   alt={testimonial.name}

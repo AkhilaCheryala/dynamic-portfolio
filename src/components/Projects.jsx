@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 function Projects({ projects }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -52,10 +51,10 @@ function Projects({ projects }) {
             </div>
           ))}
         </div>
-        {displayedProjects < projects.length && (
+        {displayedProjects < projects.length && ( // Render the "View More" button if there are more projects
           <div className="flex justify-center mt-8">
             <button
-              className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-all duration-300 ease-in-out"
+              className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"
               onClick={handleViewMore}
             >
               View More
@@ -65,19 +64,12 @@ function Projects({ projects }) {
         {modalOpen && selectedProject !== null && (
           <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center transition-opacity ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <div className="bg-white p-8 max-w-3xl overflow-hidden relative">
-              <motion.img
+              <img
                 src={projects[selectedProject].image.url}
                 alt={projects[selectedProject].title}
                 className={`mx-auto ${imageLoaded ? 'scale-100' : 'scale-0'}`}
                 style={{ transitionDuration: '0.5s' }}
                 onLoad={handleImageLoad}
-                initial={{ rotate: 0,  scale: 0 }}
-                animate={{ rotate: 360, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 26
-                }}
               />
               <div className='flex gap-28 absolute top-[15rem] left-52'>
                 <a href={projects[selectedProject].liveurl} className=" hover:underline  rounded-3xl w-max py-2 px-4 mt-6 bg-gradient-to-r from-violet-500 to-fuchsia-500 font-bold shadow-lg shadow-slate-800">
