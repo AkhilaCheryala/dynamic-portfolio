@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { color, motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core'; // Import library from fontawesome-svg-core
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpenReader, faComments, faEnvelope, faFileCircleCheck, faHandshakeAngle, faHeadSideVirus, faList, faUser } from '@fortawesome/free-solid-svg-icons';
 
-// Add icons to the library
-library.add(faBookOpenReader, faComments, faEnvelope, faFileCircleCheck, faHandshakeAngle, faHeadSideVirus, faList, faUser);
 
 
 function Header({ user }) {
