@@ -63,7 +63,7 @@ body{
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-50% + 200px)); /* Adjust the value accordingly */
+      transform: translateX(calc(-50% + 200px));
     }
   }
   input[type="range"] {
