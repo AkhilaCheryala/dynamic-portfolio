@@ -4,7 +4,7 @@ function Projects({ projects }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [displayedProjects, setDisplayedProjects] = useState(6); // Initially display 6 projects
+  const [displayedProjects, setDisplayedProjects] = useState(6);
 
   const handleProjectClick = (index) => {
     setSelectedProject(index);
@@ -22,11 +22,11 @@ function Projects({ projects }) {
   };
 
   const handleViewMore = () => {
-    setDisplayedProjects(displayedProjects + 6); // Increase the number of displayed projects by 6
+    setDisplayedProjects(displayedProjects + 6); 
   };
 
   return (
-    <section className="bg-gray-900 text-white py-20">
+    <section className="bg-gray-900 text-white py-20" id='projects'>
       <div className="container mx-auto px-4">
         <h2 className="text-[50px] font-bold mb-10 text-center">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,7 +51,7 @@ function Projects({ projects }) {
             </div>
           ))}
         </div>
-        {displayedProjects < projects.length && ( // Render the "View More" button if there are more projects
+        {displayedProjects < projects.length && ( 
           <div className="flex justify-center mt-8">
             <button
               className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"

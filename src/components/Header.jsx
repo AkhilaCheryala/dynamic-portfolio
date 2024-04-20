@@ -69,26 +69,26 @@ function Header({ user }) {
       <div className='flex flex-col w-in h-96 text-xl p-2 z-[1000] shadow-lg shadow-black fixed right-6 top-32 bg-slate-300 bg-opacity-15 rounded-3xl'>
         <div className="icon-container flex flex-col gap-6 text-center">
           
-          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("about")}>
+          <div className="my-icon w-8 hover:opacity-35" onClick={() => scrollToSection("about")}>
             <img src={person} alt="Person Icon" />
           </div>
-          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("skills")}>
+          <div className="my-icon w-8 hover:opacity-35" onClick={() => scrollToSection("skills")}>
             <img src={idea} alt="Introduce Icon" />
           </div>
-          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("services")}>
+          <div className="my-icon w-8 hover:opacity-35" onClick={() => scrollToSection("services")}>
             <img src={introduce} alt="Education Icon" />
           </div>
-          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("timeline")}>
+          <div className="my-icon w-8 hover:opacity-35" onClick={() => scrollToSection("timeline")}>
             <img src={education} alt="Checklists Icon" />
           </div>
-          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("projects")}>
+          <div className="my-icon w-8 hover:opacity-35" onClick={() => scrollToSection("projects")}>
             <img src={checklists} alt="Feedback Icon" />
           </div>
-          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("testimonial")}>
+          <div className="my-icon w-8 hover:opacity-35" onClick={() => scrollToSection("testimonial")}>
             <img src={feedback} alt="Idea Icon" />
           </div>
-          <div className="my-icon w-8  hover:text-gray-400" onClick={() => scrollToSection("contact")}>
-            <img src={email} alt="Email Icon" />
+          <div className="my-icon w-8  hover:opacity-35" onClick={() => scrollToSection("contact")}>
+            <img src={email} alt="Email Icon"  />
           </div>
         </div>
       </div>
