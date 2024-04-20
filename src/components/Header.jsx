@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { color, motion } from 'framer-motion';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpenReader, faComments, faEnvelope, faFileCircleCheck, faHandshakeAngle, faHeadSideVirus, faList, faUser } from '@fortawesome/free-solid-svg-icons';
+import person from '../assets/person.svg';
+import idea from '../assets/idea.svg';
+import introduce from '../assets/introduce.svg';
+import education from '../assets/education.svg';
+import checklists from '../assets/checklists.svg';
+import feedback from '../assets/feedback.svg';
+import email from '../assets/email.svg';
 
 function Header({ user }) {
   const [showSocialHandles, setShowSocialHandles] = useState(false);
@@ -27,16 +32,19 @@ function Header({ user }) {
       >
         <p className='font-mono text-xl'>Jhon Doe.</p>
         <div className='lg:hidden'>
-          <FontAwesomeIcon icon={faList} className='text-2xl' onClick={handleSocialHandles}/>
+          {/* Fontawesome icon replaced with SVG */}
+          <img src={idea} className='text-2xl' onClick={handleSocialHandles} alt="Idea Icon" />
         </div>
         <motion.ul
           className={`lg:flex gap-6 ${showSocialHandles ? 'block bg-gray-600 p-2 underline' : 'hidden'} social-container`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          style={{ position: showSocialHandles ? 'absolute' : 'relative',
-                   right: showSocialHandles ? '10px' : 'auto',
-                   top: showSocialHandles ? '56px' : 'auto' }}
+          style={{
+            position: showSocialHandles ? 'absolute' : 'relative',
+            right: showSocialHandles ? '10px' : 'auto',
+            top: showSocialHandles ? '56px' : 'auto'
+          }}
         >
           {user.social_handles.map((handle, index) => (
             <motion.li
@@ -60,26 +68,27 @@ function Header({ user }) {
 
       <div className='flex flex-col w-in h-96 text-xl p-2 z-[1000] shadow-lg shadow-black fixed right-6 top-32 bg-slate-300 bg-opacity-15 rounded-3xl'>
         <div className="icon-container flex flex-col gap-6 text-center">
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("about")}>
-            <FontAwesomeIcon icon={faUser} />
+          
+          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("about")}>
+            <img src={person} alt="Person Icon" />
           </div>
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("skills")}>
-            <FontAwesomeIcon icon={faHeadSideVirus} />
+          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("skills")}>
+            <img src={idea} alt="Introduce Icon" />
           </div>
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("services")}>
-            <FontAwesomeIcon icon={faHandshakeAngle} />
+          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("services")}>
+            <img src={introduce} alt="Education Icon" />
           </div>
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("timeline")}>
-            <FontAwesomeIcon icon={faBookOpenReader} />
+          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("timeline")}>
+            <img src={education} alt="Checklists Icon" />
           </div>
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("projects")}>
-            <FontAwesomeIcon icon={faFileCircleCheck} />
+          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("projects")}>
+            <img src={checklists} alt="Feedback Icon" />
           </div>
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("testimonial")}>
-            <FontAwesomeIcon icon={faComments} />
+          <div className="my-icon w-8 hover:text-gray-400" onClick={() => scrollToSection("testimonial")}>
+            <img src={feedback} alt="Idea Icon" />
           </div>
-          <div className="my-icon w-10 hover:text-gray-400" onClick={() => scrollToSection("contact")}>
-            <FontAwesomeIcon icon={faEnvelope} />
+          <div className="my-icon w-8  hover:text-gray-400" onClick={() => scrollToSection("contact")}>
+            <img src={email} alt="Email Icon" />
           </div>
         </div>
       </div>
