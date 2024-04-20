@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { color, motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpenReader, faComments, faEnvelope, faFileCircleCheck, faHandshakeAngle, faHeadSideVirus, faList, faUser } from '@fortawesome/free-solid-svg-icons';
-
+import '@fortawesome/fontawesome-svg-core';
 function Header({ user }) {
   const [showSocialHandles, setShowSocialHandles] = useState(false);
 
@@ -12,7 +12,7 @@ function Header({ user }) {
 
   return (
     <div style={{ position: 'relative' }}>
-      {/* Social Handles */}
+      
       <motion.div
         className=' flex  w-full justify-between fixed top-0 lg:px-20 px-8 py-6 bg-slate-800'
         initial={{ opacity: 0, y: -20 }}
@@ -52,7 +52,7 @@ function Header({ user }) {
         </motion.ul>
       </motion.div>
 
-      {/* Scroll To Section */}
+      
       <div className='flex flex-col w-in h-96 text-xl p-2 z-[1000] shadow-lg shadow-black fixed right-6 top-32 bg-slate-300 bg-opacity-15 rounded-3xl'>
         <div className="icon-container flex flex-col gap-6 text-center">
           <ScrollToSection id="about" icon={faUser} />

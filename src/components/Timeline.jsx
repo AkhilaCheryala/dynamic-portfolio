@@ -7,12 +7,12 @@ function Timeline({ experience, education }) {
 
   const [refExperience, inViewExperience] = useInView({
     triggerOnce: true,
-    threshold: 0.5, // Adjust as needed
+    threshold: 0.5,
   });
 
   const [refEducation, inViewEducation] = useInView({
     triggerOnce: true,
-    threshold: 0.5, // Adjust as needed
+    threshold: 0.5,
   });
 
   useEffect(() => {
